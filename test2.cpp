@@ -10,7 +10,7 @@ int main()
 
    //Задача 2
 #pragma omp for
-    for (int i = 0; i < processor_count; i++) {
+    for (int i = 0; i < 4; i++) {
         cout << "Hello world!" << endl;
     }
 
