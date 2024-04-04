@@ -8,13 +8,13 @@ int main()
 {
     const int processor_count = std::thread::hardware_concurrency();
 
-   //Çàäà÷à 2
+   //Ð—Ð°Ð´Ð°Ñ‡Ð° 2
 #pragma omp for
     for (int i = 0; i < processor_count; i++) {
         cout << "Hello world!" << endl;
     }
 
-    //Çàäà÷à 3
+    //Ð—Ð°Ð´Ð°Ñ‡Ð° 3
     for (int i = 0; i < processor_count; i++) {
 #pragma omp critical
         {
@@ -22,7 +22,7 @@ int main()
         }
     }
     
-    //Çàäà÷à 4
+    //Ð—Ð°Ð´Ð°Ñ‡Ð° 4
     int k, rank; 
     cout << "Enter the number of threadsfrom 1 to " << processor_count << ":";
     cin >> k;
@@ -36,7 +36,7 @@ int main()
         }
     }
 
-    //Çàäà÷à 5
+    //Ð—Ð°Ð´Ð°Ñ‡Ð° 5
     int N;
         
     cout << "Enter the number of threads from 1 to " << processor_count << ":";
