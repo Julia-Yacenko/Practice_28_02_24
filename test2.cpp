@@ -15,15 +15,18 @@ int main()
     }
 
     //Задача 3
-    for (int i = 0; i < processor_count; i++) {
+    int k;
+    cout << "Enter the number of threads from 1 to " << processor_count << ":";
+    cin >> k;
+    for (int i = 0; i < k; i++) {
 #pragma omp critical
         {
-            cout << "I am " << i << " thread from " << processor_count << " threads!" << endl;
+            cout << "I am " << i << " thread from " << k << " threads!" << endl;
         }
     }
     
     //Задача 4
-    int k, rank; 
+    int rank; 
     cout << "Enter the number of threadsfrom 1 to " << processor_count << ":";
     cin >> k;
 
